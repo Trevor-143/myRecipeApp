@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    /* outline: 1px solid red; */
+}
+button {
+    cursor: pointer;
+}
+body {
+    background-color: #ffffff;
+}
+
+.top {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+.up {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+h1 span {
+    color: #8a0000;
+    font-weight: 400;
+}
+
+form {
+    padding: 5px;
+    border: 2px solid #ffcd82;
+    border-radius: 25px;
+    margin: auto 5%;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+form input {
+    border: none;
+    background: none;
+    width: 80%;
+    margin-left: 20px;
+}
+form input:focus {
+    outline: none;
+}
+form button {
+    background: #000;
+    color: #fff;
+    padding: 10px 5px;
+    border: none;
+    width: 100px;
+    
+    border-radius: 20px;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1000px;
+    justify-content: center;
+}
+ul li {
+    list-style-type: none;
+    margin: 20px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ul li img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+ul li div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ul li h3 {
+    text-align: center;
+    font-size: 15px;
+    max-width: 130px;
+    color: rgb(65, 65, 65);
+}
+ul li button {
+    width: 130px;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background: #ffcd82;
+    color: #fff;
+    font-weight: 600;
+    margin: 10px;
+}
