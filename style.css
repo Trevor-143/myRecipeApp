@@ -33,6 +33,15 @@ body {
 h1 {
     font-size: 25px;
     color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+h1 img {
+    width: 60px;
+    margin: 0 20px;
 }
 
 h1 span {
@@ -68,6 +77,59 @@ form button {
     width: 100px;
     
     border-radius: 20px;
+}
+
+#random {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #ffcd82;
+    padding: 15px;
+    border-radius: 55px;
+}
+.content img {
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;
+    margin: 10px;
+    object-fit: cover;
+}
+.randomDesc {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 3; /* number of lines to show */
+           line-clamp: 3; 
+   -webkit-box-orient: vertical;
+   color: #ffffff;
+}
+.randomTitle {
+    padding: 10px 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+.desc button {
+    width: 130px;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    color: #ffcd82;
+    background: #fff;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+.desc button:hover {
+    background: #ffcd82;
+    color: #fff;
 }
 
 section {
@@ -114,10 +176,43 @@ ul li h3 {
 ul li button {
     width: 130px;
     padding: 10px;
-    border: none;
+    border: 2px solid #ffcd82;
     border-radius: 50px;
     background: #ffcd82;
     color: #fff;
     font-weight: 600;
     margin: 10px;
+    transition: 0.2s;
+}
+ul li button:hover {
+    color: #ffcd82;
+    background: #fff;
+}
+
+/* for the scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    margin: 20px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffcd82; 
+    border-radius: 20px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    flex-direction: column;
+}
+footer p {
+    text-align: center;
+    max-width: 400px;
+    margin: 20px ;
 }

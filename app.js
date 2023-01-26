@@ -6,19 +6,31 @@ const options = {
 	}
 };
 
-fetch('https://low-carb-recipes.p.rapidapi.com/search?name=meat', options)
-	.then(response => response.json())
-	.then(data => {
+fetch('https://low-carb-recipes.p.rapidapi.com/search?name=chicken', options)
+.then(response => response.json())
+.then(data => {
+    // console.log(data)
+    let list ='';
+    data.forEach(meal => {
+        list += `<li>
+                    <img src="${meal.image}" alt="">
+                    <div>
+                        <h3>${meal.name}</h3>
+                        <button>Read More</button>
+                    </div>
+                </li>`
+        document.querySelector('.display').innerHTML = list;            
+    }); 
+})
+
+function getRandom () {
+    fetch('https://low-carb-recipes.p.rapidapi.com/random', options)
+    .then(response => response.json())
+    .then(data => {
         console.log(data)
-        let list ='';
-        data.forEach(meal => {
-            list += `<li>
-                        <img src="${meal.image}" alt="">
-                        <div>
-                            <h3>${meal.name}</h3>
-                            <button>Read More</button>
-                        </div>
-                    </li>`
-            document.querySelector('.display').innerHTML = list;            
-        }); 
+        const randomImage = document.querySelector('.randomImage').src = data.image;
+        const randomTitle = document.querySelector('.randomTitle').innerHTML = data.name;
+        const randomDesc = document.querySelector('.randomDesc').innerHTML = data.description;
     })
+}
+getRandom();

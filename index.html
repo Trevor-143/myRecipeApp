@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./icon/logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
     <title>Find Your Recipe</title>
@@ -11,7 +12,7 @@
 <body>
     <header class="top">
         <div class="up">
-            <h1>recipe <span> Discovery</span></h1>
+            <h1><img src="./icon/logo.png" alt="logo">recipe <span> Discovery</span></h1>
             <form>
                 <input type="text" id="search_text" placeholder="eg.chicken">
                 <button id="search_btn">Search</button>
@@ -20,6 +21,16 @@
     </header>
     <main>
 
+        <section id="random">
+            <div class="content">
+                <img class="randomImage" src="" alt="">
+                <div class="desc">
+                    <h4 class="randomTitle"></h4>
+                    <p class="randomDesc"></p>
+                    <button onclick="getRandom()">Get Random</button>
+                </div>
+            </div>
+        </section>
         <section>
             <ul class="searched">
 
@@ -33,5 +44,9 @@
         </section>
 
     </main>
+    <footer>
+        <h3>&copy 2023</h3>
+        <p>This App was created using the low cap recipe api from rapidapi.com</p>
+    </footer>
 </body>
 </html>
